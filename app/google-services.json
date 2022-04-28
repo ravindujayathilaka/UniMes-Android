@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "912068466993",
+    "project_id": "unimes-a28d9",
+    "storage_bucket": "unimes-a28d9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:912068466993:android:072266b27b1658e9e3b810",
+        "android_client_info": {
+          "package_name": "com.example.unimes"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "912068466993-jtt9i85bmsutuc8be10n1dc9f6cvc89k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAeSetcpSsgSE19eakagRbsbuvOj12a1dM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "912068466993-jtt9i85bmsutuc8be10n1dc9f6cvc89k.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

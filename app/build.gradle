@@ -1,5 +1,6 @@
 plugins {
     id 'com.android.application'
+    id 'com.google.gms.google-services'
 }
 
 android {
@@ -11,7 +12,7 @@ android {
         targetSdk 32
         versionCode 1
         versionName "1.0"
-
+        multiDexEnabled true
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -45,4 +46,11 @@ dependencies {
 
     // Rounded ImageView
     implementation 'com.makeramen:roundedimageview:2.3.0'
+
+    //Firebase
+    implementation 'com.google.firebase:firebase-messaging:20.1.0'
+    implementation 'com.google.firebase:firebase-firestore:24.1.1'
+
+    //MultiDex
+    implementation 'androidx.multidex:multidex:2.0.1'
 }
