@@ -12,10 +12,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.UniMes">
         <activity
+            android:name=".activities.UsersActivity"
+            android:exported="false" />
+        <activity
             android:name=".activities.SignUpActivity"
             android:exported="false"
-            android:windowSoftInputMode="adjustResize"/>
-
+            android:windowSoftInputMode="adjustResize" />
         <activity
             android:name=".activities.SignInActivity"
             android:exported="true"
@@ -26,19 +28,17 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".activities.MainActivity"
-            android:exported="false"/>
+            android:exported="false" />
 
         <service
             android:name=".firebase.MessagingService"
             android:exported="false">
             <intent-filter>
-                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
         </service>
-
     </application>
 
 </manifest>

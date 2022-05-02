@@ -3,13 +3,18 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Ravindu 2/personal/Sliit/Y2S2/MAD/Project/UniMes/app/src/main/res/drawable/background_content_bottom.xml" value="0.196" />
         <entry key="..\:/Ravindu 2/personal/Sliit/Y2S2/MAD/Project/UniMes/app/src/main/res/drawable/background_icon.xml" value="0.196" />
         <entry key="..\:/Ravindu 2/personal/Sliit/Y2S2/MAD/Project/UniMes/app/src/main/res/drawable/background_image.xml" value="0.1965" />
         <entry key="..\:/Ravindu 2/personal/Sliit/Y2S2/MAD/Project/UniMes/app/src/main/res/drawable/background_input.xml" value="0.2" />
+        <entry key="..\:/Ravindu 2/personal/Sliit/Y2S2/MAD/Project/UniMes/app/src/main/res/drawable/ic_add.xml" value="0.196" />
+        <entry key="..\:/Ravindu 2/personal/Sliit/Y2S2/MAD/Project/UniMes/app/src/main/res/drawable/ic_back.xml" value="0.196" />
         <entry key="..\:/Ravindu 2/personal/Sliit/Y2S2/MAD/Project/UniMes/app/src/main/res/drawable/ic_logout.xml" value="0.196" />
         <entry key="..\:/Ravindu 2/personal/Sliit/Y2S2/MAD/Project/UniMes/app/src/main/res/layout/activity_main.xml" value="0.264" />
         <entry key="..\:/Ravindu 2/personal/Sliit/Y2S2/MAD/Project/UniMes/app/src/main/res/layout/activity_sign_in.xml" value="0.264" />
         <entry key="..\:/Ravindu 2/personal/Sliit/Y2S2/MAD/Project/UniMes/app/src/main/res/layout/activity_sign_up.xml" value="0.264" />
+        <entry key="..\:/Ravindu 2/personal/Sliit/Y2S2/MAD/Project/UniMes/app/src/main/res/layout/activity_users.xml" value="0.25" />
+        <entry key="..\:/Ravindu 2/personal/Sliit/Y2S2/MAD/Project/UniMes/app/src/main/res/layout/item_container_user.xml" value="0.25416666666666665" />
       </map>
     </option>
   </component>

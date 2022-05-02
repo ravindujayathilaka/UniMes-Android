@@ -10,4 +10,5 @@
     <string name="confirm_your_password">Confirm your password</string>
     <string name="sign_up">SIGN UP</string>
     <string name="add_image">Add Image</string>
+    <string name="select_user">Select User</string>
 </resources>
