@@ -37,3 +37,4 @@ public class PreferenceManager {
         editor.apply();
     }
 }
+//Test
