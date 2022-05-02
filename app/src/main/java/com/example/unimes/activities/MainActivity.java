@@ -1,8 +1,10 @@
-package com.example.unimes;
+package com.example.unimes.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.example.unimes.R;
 
 public class MainActivity extends AppCompatActivity {
 
