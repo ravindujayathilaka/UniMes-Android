@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.UniMes">
         <activity
+            android:name=".activities.ChatActivity"
+            android:exported="false" />
+        <activity
             android:name=".activities.UsersActivity"
             android:exported="false" />
         <activity
