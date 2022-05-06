@@ -13,7 +13,6 @@
         android:theme="@style/Theme.UniMes">
         <activity
             android:name=".activities.ChatActivity"
-            android:exported="false"
             android:windowSoftInputMode="adjustResize" />
         <activity
             android:name=".activities.UsersActivity"

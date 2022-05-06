@@ -1,15 +1,12 @@
 package com.example.unimes.activities;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-import android.service.controls.actions.BooleanAction;
 import android.view.View;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.example.unimes.adapters.UsersAdapter;
-import com.example.unimes.databinding.ActivityMainBinding;
 import com.example.unimes.databinding.ActivityUsersBinding;
 import com.example.unimes.listeners.UserListener;
 import com.example.unimes.models.User;
@@ -59,6 +56,7 @@ public class UsersActivity extends AppCompatActivity implements UserListener {
                             user.email = queryDocumentSnapshot.getString(Constants.KEY_EMAIL);
                             user.image = queryDocumentSnapshot.getString(Constants.KEY_IMAGE);
                             user.token = queryDocumentSnapshot.getString(Constants.KEY_FCM_TOKEN);
+                            user.id = queryDocumentSnapshot.getId();
                             users.add(user);
                         }
                         if (users.size() > 0){
