@@ -277,12 +277,36 @@
     android:gravity="center"
     android:orientation="vertical">
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="180dp"
+        android:layout_height="50dp"
         android:background="@drawable/bg_btn"
-        android:text="Edit Profile"/>
-"
+        android:text="Edit Profile"
+        android:gravity="center"
+        android:textColor="@color/colorAccent"
+        android:textSize="15dp"
+        android:drawableLeft="@drawable/ic_edit"
+        android:padding="10dp"
+        android:layout_marginLeft="-10dp"
+        />
+
+    <TextView
+        android:layout_width="180dp"
+        android:layout_height="50dp"
+        android:background="@drawable/bg_btn"
+        android:text="change pswd"
+        android:gravity="center"
+        android:textColor="@color/colorAccent"
+        android:textSize="18dp"
+        android:drawableLeft="@drawable/ic_edit"
+        android:padding="20dp"
+        android:layout_marginLeft="-10dp"
+        android:layout_margintop="15dp"
+        />
+
+
+
 </LinearLayout>
+
 
 
     </LinearLayout>
