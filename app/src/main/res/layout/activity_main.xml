@@ -126,7 +126,8 @@
             android:orientation="horizontal"
             android:paddingLeft="15dp"
             android:paddingRight="15dp"
-            android:layout_marginTop="20dp">
+            android:layout_marginTop="20dp"
+            android:gravity="center_vertical">
 
             <ImageView
                 android:layout_width="25dp"
@@ -139,9 +140,26 @@
                 android:text="First name"
                 android:textStyle="bold"
                 android:textColor="@android:color/black"
-                android:textSize="18dp"
+                android:textSize="20dp"
                 android:layout_marginLeft="5dp"
                 ></TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nuwan"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="18dp"
+
+                ></TextView>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@android:color/darker_gray"
+                android:layout_marginTop="10dp"></View>
+
+
         </LinearLayout>
 
     </LinearLayout>
