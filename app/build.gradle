@@ -53,4 +53,9 @@ dependencies {
 
     //MultiDex
     implementation 'androidx.multidex:multidex:2.0.1'
+
+//circularimage
+    implementation 'com.mikhaellopez:circularimageview:4.3.0'
+
+
 }

@@ -61,6 +61,10 @@
         app:layout_constraintTop_toBottomOf="@id/imageProfile" >
 
 
+        <com.mikhaellopez.circularimageview.CircularImageView
+            android:layout_width="114dp"
+            android:layout_height="109dp"
+            android:src="@drawable/man" />
     </FrameLayout>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -77,11 +81,35 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:tint="@color/white" />
 
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".activities.MainActivity">
 
 
+<include layout="@layout/toolbar"></include>
 
+<LinearLayout android:layout_height="match_parent"
+              android:layout_width="wrap_content"
+                android:paddingTop="15dp"
+                android:gravity="center"
+                android:orientation="vertical">
 
+    <com.mikhaellopez.circularimageview.CircularImageView
+        android:layout_width="114dp"
+        android:layout_height="109dp"
+        android:src="@drawable/man" />
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+</LinearLayout>
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 
