@@ -44,11 +44,14 @@
 
     </LinearLayout>>
 
+
     <View android:layout_width="match_parent"
         android:layout_height="1dp"
         android:background="@color/colorAccent"
         android:layout_below="@+id/liner_ll"
         android:paddingRight="8dp"
         android:paddingLeft="8dp"></View>
+
+
 
 </RelativeLayout>
