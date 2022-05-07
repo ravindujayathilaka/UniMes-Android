@@ -41,3 +41,25 @@ public class AdapterItem extends RecyclerView.Adapter<AdapterItem.ItemViewHolder
         return dataUserArrayList.size();
     }
 
+    public class ItemViewHolder extends RecyclerView.ViewHolder {
+        TextView tv_nama,
+                tv_jk,
+                tv_jurusan,
+                tv_tanggal_pendaftaran;
+
+        public ItemViewHolder(@NonNull View itemView) {
+            super(itemView);
+            tv_nama = itemView.findViewById(R.id.tv_nama);
+            tv_jk = itemView.findViewById(R.id.tv_jk);
+            tv_jurusan = itemView.findViewById(R.id.tv_jurusan);
+            tv_tanggal_pendaftaran = itemView.findViewById(R.id.tv_tanggal_pendaftaran);
+        }
+
+        public void viewBind(dataUser dataUser) {
+            tv_nama.setText(dataUser.getNama());
+            tv_jk.setText(dataUser.getJk());
+            tv_jurusan.setText(dataUser.getJurusan());
+            tv_tanggal_pendaftaran.setText(simpleDateFormat.format(dataUser.getTgl_pendaftaran()));
+        }
+    }
+}
