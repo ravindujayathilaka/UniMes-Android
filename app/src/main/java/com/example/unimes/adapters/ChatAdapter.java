@@ -104,44 +104,44 @@ public class ChatAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>{
         }
     }
 
-    holder.binding.baseLayout.setOnLongClickListener(new View.OnLongClickListener() {
-        @Override
-        public boolean onLongClick(View v) {
-            if (currentChat.getUid().equals(Uid)) {
-                AlertDialog dialog = new AlertDialog.Builder(context)
-                        .setMessage("Edit or Delete Message")
-                        .setPositiveButton("Delete", new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialog, int which) {
-                                if (currentChat.getImg() != null) {
-                                    StorageReference ref = FirebaseStorage.getInstance().getReferenceFromUrl(currentChat.getImg());
-                                    ref.delete();
-                                }
-                                DatabaseReference ref = FirebaseDatabase.getInstance()
-                                        .getReference("chats").child(currentChat.getKey());
-                                ref.removeValue();
-                            }
-                        })
-                        .setNegativeButton("Edit", new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialog, int which) {
-                                dialog.dismiss();
-                                dialogAlertForEdit(context, position);
-                            }
-                        })
-                        .setNeutralButton("Nope", new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialog, int which) {
-                                dialog.dismiss();
-                            }
-                        }).create();
-                dialog.show();
-                return true;
-            } else {
-                return false;
-            }
-
-        }
-    });
-}
+//    holder.binding.baseLayout.setOnLongClickListener(new View.OnLongClickListener() {
+//        @Override
+//        public boolean onLongClick(View v) {
+//            if (currentChat.getUid().equals(Uid)) {
+//                AlertDialog dialog = new AlertDialog.Builder(context)
+//                        .setMessage("Edit or Delete Message")
+//                        .setPositiveButton("Delete", new DialogInterface.OnClickListener() {
+//                            @Override
+//                            public void onClick(DialogInterface dialog, int which) {
+//                                if (currentChat.getImg() != null) {
+//                                    StorageReference ref = FirebaseStorage.getInstance().getReferenceFromUrl(currentChat.getImg());
+//                                    ref.delete();
+//                                }
+//                                DatabaseReference ref = FirebaseDatabase.getInstance()
+//                                        .getReference("chats").child(currentChat.getKey());
+//                                ref.removeValue();
+//                            }
+//                        })
+//                        .setNegativeButton("Edit", new DialogInterface.OnClickListener() {
+//                            @Override
+//                            public void onClick(DialogInterface dialog, int which) {
+//                                dialog.dismiss();
+//                                dialogAlertForEdit(context, position);
+//                            }
+//                        })
+//                        .setNeutralButton("Nope", new DialogInterface.OnClickListener() {
+//                            @Override
+//                            public void onClick(DialogInterface dialog, int which) {
+//                                dialog.dismiss();
+//                            }
+//                        }).create();
+//                dialog.show();
+//                return true;
+//            } else {
+//                return false;
+//            }
+//
+//        }
+//    });
+//}
 }
