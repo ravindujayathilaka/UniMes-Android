@@ -11,6 +11,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.unimes.R;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -18,6 +19,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
+import java.util.prefs.Preferences;
 
 public class AdapterVote  extends RecyclerView.Adapter<AdapterVote.VoteViewHolder> {
     ArrayList<dataKandidat> dataKandidatArrayList;
@@ -74,14 +76,14 @@ public class AdapterVote  extends RecyclerView.Adapter<AdapterVote.VoteViewHolde
         }
 
         public void viewBind(final dataKandidat dataKandidat) {
-            database.child("user").child(Preferences.getUsername(context)).addValueEventListener(new ValueEventListener() {
+            final ValueEventListener user = database.child("user").child(Preferences.userRoot(context)).addValueEventListener(new ValueEventListener() {
                 @Override
                 public void onDataChange(@NonNull DataSnapshot snapshot) {
                     dataUser user = snapshot.getValue(dataUser.class);
-                    if (user!= null){
-                        if (user.isVoting()){
+                    if (user != null) {
+                        if (user.isVoting()) {
                             voting.setVisibility(View.GONE);
-                        }else {
+                        } else {
                             voting.setVisibility(View.VISIBLE);
                         }
                     }
@@ -96,7 +98,7 @@ public class AdapterVote  extends RecyclerView.Adapter<AdapterVote.VoteViewHolde
             voting.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
                 @Override
                 public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                    database.child("user").child(Preferences.getUsername(context)).child("voting").setValue(true);
+                    database.child("user").child(Preferences.userRoot(context)).child("voting").setValue(true);
                     database.child("group").child(dataKandidat.key).addListenerForSingleValueEvent(new ValueEventListener() {
                         @Override
                         public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -118,13 +120,13 @@ public class AdapterVote  extends RecyclerView.Adapter<AdapterVote.VoteViewHolde
                 @Override
                 public void onDataChange(@NonNull DataSnapshot snapshot) {
                     String nama_ketua = snapshot.child("nama").getValue(String.class);
-                    String jurusan_ketua = snapshot.child("jurusan").getValue(String.class);
+                    String department_chairman = snapshot.child("major").getValue(String.class);
 
-                    tv_nama_ketua.setText("Ketua : " + nama_ketua);
+                    tv_nama_ketua.setText("Chairman : " + nama_ketua);
                     tv_npm_ketua.setText("NPM : " + dataKandidat.ketua);
-                    tv_jurusan_ketua.setText("Jurusan : " + jurusan_ketua);
+                    tv_jurusan_ketua.setText("major : " + department_chairman);
 
-                    tv_year.setText("Tahun : " + dataKandidat.year);
+                    tv_year.setText("Year : " + dataKandidat.year);
                     tv_count.setText("Count : " + dataKandidat.count);
                     group_to.setText("Group ke-"+dataKandidat.group);
                 }
@@ -139,11 +141,11 @@ public class AdapterVote  extends RecyclerView.Adapter<AdapterVote.VoteViewHolde
                 @Override
                 public void onDataChange(@NonNull DataSnapshot snapshot) {
                     String nama_wakil = snapshot.child("nama").getValue(String.class);
-                    String jurusan_wakil = snapshot.child("jurusan").getValue(String.class);
+                    String jurusan_wakil = snapshot.child("major").getValue(String.class);
 
                     tv_nama_wakil.setText("Wakil : " + nama_wakil);
                     tv_npm_wakil.setText("NPM : " + dataKandidat.wakil);
-                    tv_jurusan_wakil.setText("Jurusan : " + jurusan_wakil);
+                    tv_jurusan_wakil.setText("major : " + jurusan_wakil);
                 }
 
                 @Override
