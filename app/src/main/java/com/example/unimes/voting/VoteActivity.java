@@ -20,6 +20,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
+import java.util.prefs.Preferences;
 
 public class VoteActivity extends AppCompatActivity {
     RecyclerView recyclerView;
@@ -79,15 +80,15 @@ public class VoteActivity extends AppCompatActivity {
             @Override
             public boolean onMenuItemClick(MenuItem item) {
                 new AlertDialog.Builder(context)
-                        .setMessage("Apa kamu yakin ingin keluar?")
-                        .setPositiveButton("Ya", new DialogInterface.OnClickListener() {
+                        .setMessage("Are you sure you want to leave?")
+                        .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
                                 Preferences.clearData(context);
                                 startActivity(new Intent(context,LoginActivity.class));
                                 finish();
                             }
-                        }).setNegativeButton("Batal", new DialogInterface.OnClickListener() {
+                        }).setNegativeButton("No", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         dialog.dismiss();

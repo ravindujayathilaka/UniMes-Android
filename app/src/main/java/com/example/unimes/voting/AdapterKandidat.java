@@ -12,6 +12,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.unimes.R;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -25,7 +26,8 @@ public class AdapterKandidat extends RecyclerView.Adapter<AdapterKandidat.Kandid
     Context context;
     DatabaseReference database = FirebaseDatabase.getInstance().getReference();
 
-    public AdapterKandidat(ArrayList<com.budyfriend.daterangepickerfirebase.dataKandidat> dataKandidatArrayList, Context context) {
+    public AdapterKandidat(ArrayList<com.budyfriend.daterangepickerfirebase.dataKandidat> dataKandidatArrayList,
+                           Context context) {
         this.dataKandidatArrayList = dataKandidatArrayList;
         this.context = context;
     }
@@ -77,13 +79,13 @@ public class AdapterKandidat extends RecyclerView.Adapter<AdapterKandidat.Kandid
                 @Override
                 public void onDataChange(@NonNull DataSnapshot snapshot) {
                     String nama_ketua = snapshot.child("nama").getValue(String.class);
-                    String jurusan_ketua = snapshot.child("jurusan").getValue(String.class);
+                    String department_chairman = snapshot.child("major").getValue(String.class);
 
-                    tv_nama_ketua.setText("Ketua : " + nama_ketua);
+                    tv_nama_ketua.setText("Chairman : " + nama_ketua);
                     tv_npm_ketua.setText("NPM : " + dataKandidat.ketua);
-                    tv_jurusan_ketua.setText("Jurusan : " + jurusan_ketua);
+                    tv_jurusan_ketua.setText("major : " + department_chairman);
 
-                    tv_year.setText("Tahun : " + dataKandidat.year);
+                    tv_year.setText("year : " + dataKandidat.year);
                     tv_count.setText("Count : " + dataKandidat.count);
                     group_to.setText("Group ke-" + dataKandidat.group);
                 }
@@ -115,15 +117,15 @@ public class AdapterKandidat extends RecyclerView.Adapter<AdapterKandidat.Kandid
                 @Override
                 public void onClick(View v) {
                     new AlertDialog.Builder(context)
-                            .setMessage("Apa kamu yakin ingin hapus?")
-                            .setPositiveButton("Ya", new DialogInterface.OnClickListener() {
+                            .setMessage("Are you sure you want to delete?")
+                            .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                                 @Override
                                 public void onClick(DialogInterface dialog, int which) {
                                     database.child("group").child(dataKandidat.key).removeValue();
-                                    Toast.makeText(context,"Data berhasil dihapus", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(context,"Data deleted successfully", Toast.LENGTH_SHORT).show();
                                     dialog.dismiss();
                                 }
-                            }).setNegativeButton("Batal", new DialogInterface.OnClickListener() {
+                            }).setNegativeButton("Cancelled", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
                             dialog.dismiss();

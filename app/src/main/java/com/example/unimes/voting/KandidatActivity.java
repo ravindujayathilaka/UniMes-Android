@@ -101,16 +101,16 @@ public class KandidatActivity extends AppCompatActivity {
                         final String group = et_group.getText().toString();
                         final String year = simpleDateFormat.format(System.currentTimeMillis());
                         if (nama_ketua.isEmpty()) {
-                            et_nama_ketua.setError("Data tidak boleh kosong");
+                            et_nama_ketua.setError("Data cannot be empty");
                             et_nama_ketua.requestFocus();
                         } else if (nama_wakil.isEmpty()) {
-                            et_nama_wakil.setError("Data tidak boleh kosong");
+                            et_nama_wakil.setError("Data cannot be empty");
                             et_nama_wakil.requestFocus();
                         } else if (group.isEmpty()) {
-                            et_group.setError("Data tidak boleh kosong");
+                            et_group.setError("Data cannot be empty");
                             et_group.requestFocus();
                         } else if (nama_ketua.equals(nama_wakil)){
-                            Toast.makeText(context,"Data tidak boleh sama",Toast.LENGTH_SHORT).show();
+                            Toast.makeText(context,"Data cannot be the same",Toast.LENGTH_SHORT).show();
                         } else {
                             progressDialog.setMessage("Loading...");
                             progressDialog.show();
@@ -132,7 +132,7 @@ public class KandidatActivity extends AppCompatActivity {
                                     }
 
                                     if (saved) {
-                                        Toast.makeText(context, "Data sudah ada", Toast.LENGTH_SHORT).show();
+                                        Toast.makeText(context, "Data already exists", Toast.LENGTH_SHORT).show();
                                         progressDialog.dismiss();
                                     } else {
                                         database.child("group").child(group + "_" + year).setValue(new com.budyfriend.daterangepickerfirebase.dataKandidat(
@@ -144,14 +144,14 @@ public class KandidatActivity extends AppCompatActivity {
                                         )).addOnSuccessListener(new OnSuccessListener<Void>() {
                                             @Override
                                             public void onSuccess(Void aVoid) {
-                                                Toast.makeText(context, "Data berhasil disimpan", Toast.LENGTH_SHORT).show();
+                                                Toast.makeText(context, "Data saved successfully", Toast.LENGTH_SHORT).show();
                                                 progressDialog.dismiss();
                                                 dialog.dismiss();
                                             }
                                         }).addOnFailureListener(new OnFailureListener() {
                                             @Override
                                             public void onFailure(@NonNull Exception e) {
-                                                Toast.makeText(context, "Data gagal disimpan", Toast.LENGTH_SHORT).show();
+                                                Toast.makeText(context, "Data failed to save", Toast.LENGTH_SHORT).show();
                                                 progressDialog.dismiss();
                                                 dialog.dismiss();
                                             }
