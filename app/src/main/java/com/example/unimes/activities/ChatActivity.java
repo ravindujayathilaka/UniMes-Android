@@ -136,33 +136,33 @@ public class ChatActivity extends AppCompatActivity {
         return new SimpleDateFormat("MMMM dd, yyyy - hh:mm a", Locale.getDefault()).format(date);
     }
 
-    @Override
-    protected void onStop() {
-        super.onStop();
-        DocumentReference documentReference=firebaseFirestore.collection("Users").document(firebaseAuth.getUid());
-        documentReference.update("status","Offline").addOnSuccessListener(new OnSuccessListener<Void>() {
-            @Override
-            public void onSuccess(Void aVoid) {
-                Toast.makeText(getApplicationContext(),"Now User is Offline",Toast.LENGTH_SHORT).show();
-            }
-        });
-
-
-
-    }
-
-    @Override
-    protected void onStart() {
-        super.onStart();
-        DocumentReference documentReference=database.collection("Users").document(firebaseAuth.getUid());
-        documentReference.update("status","Online").addOnSuccessListener(new OnSuccessListener<Void>() {
-            @Override
-            public void onSuccess(Void aVoid) {
-                Toast.makeText(getApplicationContext(),"Now User is Online", Toast.LENGTH_SHORT).show();
-            }
-        });
-
-    }
-}
+//    @Override
+//    protected void onStop() {
+//        super.onStop();
+//        DocumentReference documentReference=firebaseFirestore.collection("Users").document(firebaseAuth.getUid());
+//        documentReference.update("status","Offline").addOnSuccessListener(new OnSuccessListener<Void>() {
+//            @Override
+//            public void onSuccess(Void aVoid) {
+//                Toast.makeText(getApplicationContext(),"Now User is Offline",Toast.LENGTH_SHORT).show();
+//            }
+//        });
+//
+//
+//
+//    }
+//
+//    @Override
+//    protected void onStart() {
+//        super.onStart();
+//        DocumentReference documentReference=database.collection("Users").document(firebaseAuth.getUid());
+//        documentReference.update("status","Online").addOnSuccessListener(new OnSuccessListener<Void>() {
+//            @Override
+//            public void onSuccess(Void aVoid) {
+//                Toast.makeText(getApplicationContext(),"Now User is Online", Toast.LENGTH_SHORT).show();
+//            }
+//        });
+//
+//    }
+//}
 
 }
