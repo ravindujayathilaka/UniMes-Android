@@ -41,7 +41,8 @@ public class ProfileActivity extends AppCompatActivity {
             public void onClick(View view) {
                 AlertDialog.Builder dialog = new AlertDialog.Builder(ProfileActivity.this);
                 dialog.setTitle("Are You Sure?");
-                dialog.setMessage("Are you sure you want to delete your account?if you delete your account you will permanently losee your profile,messages and photos ");
+                dialog.setMessage("Are you sure you want to delete your account?if you delete your account you will " +
+                        "permanently losee your profile,messages and photos ");
            dialog.setPositiveButton("Delete", new DialogInterface.OnClickListener() {
                @Override
                public void onClick(DialogInterface dialogInterface, int i) {
