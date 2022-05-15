@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ApplicationPolicyActivity"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/applicationPolicyTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:textColor="@color/black"
+        android:padding="10dp"
+        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large"
+        android:textStyle="bold"
+        android:text="@string/policy" />
+
+    <ScrollView
+        android:id="@+id/termsAndPrivacyPolicy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/applicationPolicyTitle"
+        android:paddingTop="10dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/applicationPolicyTitle">
+        <TextView
+            android:id="@+id/applicationPolicy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:lineSpacingExtra="5dp"
+            android:padding="10dp"
+            android:text="@string/policy_content"
+            tools:ignore="MissingConstraints" />
+
+        <Button
+            android:id="@+id/policyBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/accept_the_conditions"
+            android:layout_marginBottom="10dp"
+            android:textColor="@color/white"
+            app:layout_constraintTop_toBottomOf="@id/applicationPolicy"
+            android:background="@color/colorPrimaryDark"
+
+            tools:ignore="MissingConstraints" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+
+
+</RelativeLayout>

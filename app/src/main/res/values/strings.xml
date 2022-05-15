@@ -1,15 +1,49 @@
 <resources>
     <string name="app_name">UniMes</string>
-    <string name="welcome_back">Welcome Back!!</string>
-    <string name="login_to_continue">Login to Continue</string>
-    <string name="enter_your_email">Enter your email</string>
-    <string name="enter_your_password">Enter your passwrod</string>
-    <string name="sign_in">Sign In</string>
-    <string name="create_new_account">Create New Account</string>
-    <string name="enter_your_name">Enter your name</string>
-    <string name="confirm_your_password">Confirm your password</string>
     <string name="sign_up">SIGN UP</string>
-    <string name="add_image">Add Image</string>
-    <string name="select_user">Select User</string>
-    <string name="type_a_message">Type a message</string>
+    <string name="facebook">FaceBook</string>
+    <string name="google">Google</string>
+    <string name="already_have_account">Already Have Account</string>
+    <string name="username">Username</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="sign_up_with_phone">Sign up with Phone</string>
+    <string name="click_for_sign_up">Click for Sign Up</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="enter_your_message">Enter your Message</string>
+    <string name="test_user">Test User</string>
+    <string name="sign_in">SIGN IN</string>
+    <string name="policy">Terms and Privacy Policy</string>
+    <string name="policy_content"><p><b><big>UniMes Legal Info</big></b>\n\n
+If you live outside the European Region, UniMes LLC ("UniMes," "our," "we," or "us") provides our Services to you under this Terms of Service and Privacy Policy.\n\n
+Our Privacy Policy ("Privacy Policy") helps explain our data practices, including the information we process to provide our Services.\n\n
+For example, our Privacy Policy talks about what information we collect and how this affects you. It also explains the steps we take to protect your privacy, like building our Services so delivered messages aren’t stored by us and giving you control over who you communicate with on our Services.\n\n
+We are one of the Meta Companies. You can learn more further below in this Privacy Policy about the ways in which we share information across this family of companies.\n\n
+This Privacy Policy applies to all of our Services unless specified otherwise. Please also read UniMes’s Terms of Service ("Terms"), which describe the terms under which you use and we provide our Services.\n\n</p>
+        <p><b><big>Key Updates\n</big></b>
+    <ol>Respect for your privacy is coded into our DNA. Since we started UniMes, we’ve built our services with a set of strong privacy principles in mind. In our updated Terms of Service and Privacy Policy you’ll find:\n
+        \n<b>Additional Information On How We Handle Your Data. </b> Our updated Terms and Privacy Policy provide more information on how we process your data, and our commitment to privacy. For example, we’ve added more information about more recent product features and functionalities, how we process your data for safety, security, and integrity, and added more direct links to user settings, Help Center articles and how you can manage your information.
+        <li>\n<b>Better Communication With Businesses. </b>Many businesses rely on UniMes to communicate with their customers and clients. We work with businesses that use Meta or third parties to help store and better manage their communications with you on UniMes.</li>
+        <li>\n<b>Making It Easier To Connect. </b>As part of the Meta Companies, UniMes partners with Meta to offer experiences and integrations across Meta’s family of apps and products.</li>
+        <li></li>
+    </ol>
+            <p><b><big>\n\nInformation We Collect\n</big></b>
+UniMes must receive or collect some information to operate, provide, improve, understand, customize, support, and market our Services, including when you install, access, or use our Services.\n\n
+The types of information we receive and collect depend on how you use our Services. We require certain information to deliver our Services and without this we will not be able to provide our Services to you. For example, you must provide your mobile phone number to create an account to use our Services.\n\n
+Our Services have optional features which, if used by you, require us to collect additional information to provide such features. You will be notified of such collection, as appropriate. If you choose not to provide the information needed to use a feature, you will be unable to use the feature. For example, you cannot share your location with your contacts if you do not permit us to collect your location data from your device. Permissions can be managed through your Settings menu on both Android and iOS devices.\n\n</p>
+<ol>Information You Provide\n\n<b>Your Account Information.</b>You must provide your mobile phone number and basic information (including a profile name of your choice) to create a UniMes account. If you don’t provide us with this information, you will not be able to create an account to use our Services. You can add other information to your account, such as a profile picture and "about" information.
+<li>\n<b>Your Messages. </b>We do not retain your messages in the ordinary course of providing our Services to you. Instead, your messages are stored on your device and not typically stored on our servers. Once your messages are delivered, they are deleted from our servers. The following scenarios describe circumstances where we may store your messages in the course of delivering them</li><li></li></ol>
+</p>
+<p><b><big>\n\n\nContact Us</big></b>
+\n\nIf you have questions or issues about our Privacy Policy, please contact us.\n
+\nUniMes LLC
+\nTerms and Privacy Policy
+\nSLIIT Malabe
+\nSri Lanka
+\n+94 71 102 0347
+\nit20113704@my.sliit.lk</p>
+</string>
+    <string name="accept_the_conditions">Accept the Conditions</string>
+
 </resources>
