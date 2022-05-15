@@ -58,5 +58,7 @@ dependencies {
 //circularimage
     implementation 'com.mikhaellopez:circularimageview:4.3.0'
 
+    implementation 'com.github.3llomi:RecordView:3.1.1'
+
 
 }
