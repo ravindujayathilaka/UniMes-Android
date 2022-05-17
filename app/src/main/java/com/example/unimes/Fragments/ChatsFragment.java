@@ -10,6 +10,8 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
 import com.example.unimes.Adapters.UsersAdapter;
+import com.example.unimes.R;
+import com.example.unimes.databinding.ActivityMainBinding;
 import com.example.unimes.databinding.FragmentChatsBinding;
 import com.example.unimes.models.Users;
 import com.google.firebase.auth.FirebaseAuth;
@@ -46,7 +48,7 @@ public class ChatsFragment extends Fragment {
         database.getReference().child("Users").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                    list.clear();
+                list.clear();
                 for(DataSnapshot dataSnapshot : snapshot.getChildren()) {
                     Users users = dataSnapshot.getValue(Users.class);
                     users.setUserId(dataSnapshot.getKey());

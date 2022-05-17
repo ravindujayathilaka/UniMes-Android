@@ -6,8 +6,8 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 
-import com.example.unimes.Fragments.CallsFragment;
 import com.example.unimes.Fragments.ChatsFragment;
+import com.example.unimes.Fragments.QuestionPollFragment;
 import com.example.unimes.Fragments.StatusFragment;
 
 public class FragmentsAdapter extends FragmentPagerAdapter {
@@ -25,7 +25,7 @@ public class FragmentsAdapter extends FragmentPagerAdapter {
         switch (position) {
             case 0: return new ChatsFragment();
             case 1: return new StatusFragment();
-            case 2: return new CallsFragment();
+            case 2: return new QuestionPollFragment();
             default: return new ChatsFragment();
         }
     }
@@ -47,7 +47,7 @@ public class FragmentsAdapter extends FragmentPagerAdapter {
             title = "STATUS";
         }
         if (position == 2) {
-            title = "CALLS";
+            title = "QUESTION POLL";
         }
         return title;
 

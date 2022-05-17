@@ -1,14 +1,14 @@
 package com.example.unimes;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.Toast;
-
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.unimes.Adapters.FragmentsAdapter;
 import com.example.unimes.databinding.ActivityMainBinding;
@@ -59,6 +59,12 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(this, "Chat Room Activated", Toast.LENGTH_SHORT).show();
                 Intent crIntent = new Intent(MainActivity.this, GroupChatActivity.class);
                 startActivity(crIntent);
+                break;
+
+            case R.id.qPoll:
+                Toast.makeText(this, "Create Question Poll", Toast.LENGTH_SHORT).show();
+                Intent pollIntent = new Intent(MainActivity.this, CreateQuestionActivity.class);
+                startActivity(pollIntent);
         }
         return super.onOptionsItemSelected(item);
     }

@@ -1,12 +1,12 @@
 package com.example.unimes;
 
-import android.content.Intent;
-import android.os.Bundle;
-import android.view.View;
-
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
 
 import com.example.unimes.Adapters.ChatAdapter;
 import com.example.unimes.databinding.ActivityChatDetailBinding;
@@ -119,19 +119,19 @@ public class ChatDetailActivity extends AppCompatActivity {
                         .child(senderRoom)
                         .push()
                         .setValue(model).addOnSuccessListener(new OnSuccessListener<Void>() {
-                    @Override
-                    public void onSuccess(Void aVoid) {
-                        database.getReference().child("Chats")
-                                .child(receiverRoom)
-                                .push()
-                                .setValue(model).addOnSuccessListener(new OnSuccessListener<Void>() {
                             @Override
                             public void onSuccess(Void aVoid) {
+                                database.getReference().child("Chats")
+                                        .child(receiverRoom)
+                                        .push()
+                                        .setValue(model).addOnSuccessListener(new OnSuccessListener<Void>() {
+                                            @Override
+                                            public void onSuccess(Void aVoid) {
 
+                                            }
+                                        });
                             }
                         });
-                    }
-                });
 
 
 

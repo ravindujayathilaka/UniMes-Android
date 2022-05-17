@@ -1,19 +1,24 @@
 package com.example.unimes;
 
-import android.content.Intent;
-import android.net.Uri;
-import android.os.Bundle;
-import android.view.View;
-import android.widget.Toast;
-
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.AlertDialog;
+import android.content.Intent;
+import android.net.Uri;
+import android.os.Bundle;
+import android.text.Html;
+import android.view.View;
+import android.widget.Toast;
+
 import com.example.unimes.databinding.ActivitySettingsBinding;
 import com.example.unimes.models.Users;
+import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.FirebaseDatabase;
@@ -31,6 +36,7 @@ public class SettingsActivity extends AppCompatActivity {
     FirebaseStorage storage;
     FirebaseAuth auth;
     FirebaseDatabase database;
+    FirebaseUser user;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,12 +48,67 @@ public class SettingsActivity extends AppCompatActivity {
 
         storage = FirebaseStorage.getInstance();
         auth = FirebaseAuth.getInstance();
+        user = auth.getCurrentUser();
         database =FirebaseDatabase.getInstance();
 
         binding.back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(SettingsActivity.this, MainActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        binding.deleteUserAccount.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                new AlertDialog.Builder(SettingsActivity.this)
+                        .setTitle(Html.fromHtml("<font color='#9F0B0B'>Delete User Account</font>"))
+                        .setMessage(Html.fromHtml("<font color='#9F0B0B'>Deleting this Account will result in completely removing <br/> your account from the system and you won't be access the app</font>"))
+                        .setCancelable(false)
+                        .setPositiveButton(Html.fromHtml("<font color='#9F0B0B'>Delete</font>"), (dialogInterface, i) -> {
+                            database.getReference().child("Users")
+                                    .child(user.getUid()).setValue(null).addOnCompleteListener(new OnCompleteListener<Void>() {
+                                        @Override
+                                        public void onComplete(@NonNull Task<Void> task) {
+                                            if (task.isSuccessful()) {
+                                                Toast.makeText(SettingsActivity.this, "Account Details Are Deleted", Toast.LENGTH_SHORT).show();
+                                            }
+                                            else {
+                                                Toast.makeText(SettingsActivity.this, task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+                                            }
+                                        }
+                                    });
+                            user.delete().addOnCompleteListener(new OnCompleteListener<Void>() {
+                                @Override
+                                public void onComplete(@NonNull Task<Void> task) {
+                                    if (task.isSuccessful()) {
+                                        Toast.makeText(SettingsActivity.this, "Account Deleted", Toast.LENGTH_SHORT).show();
+                                        auth.signOut();
+                                        Intent intent = new Intent(SettingsActivity.this, SignInActivity.class);
+                                        startActivity(intent);
+                                    }
+                                    else {
+                                        Toast.makeText(SettingsActivity.this, task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+                                    }
+                                }
+                            });
+                        }).setNegativeButton(Html.fromHtml("<font color='#7946D3'>Dismiss</font>"), (dialogInterface, i) -> dialogInterface.dismiss()).show();
+            }
+        });
+
+        binding.privacypolicyBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(SettingsActivity.this, ShowPrivacyPolicyActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        binding.aboutusBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(SettingsActivity.this, AboutUsActivity.class);
                 startActivity(intent);
             }
         });

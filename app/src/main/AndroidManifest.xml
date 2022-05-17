@@ -9,15 +9,20 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.UniMes">
         <activity
+            android:name=".AboutUsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ShowPrivacyPolicyActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CreateQuestionActivity"
+            android:exported="true" />
+        <activity
             android:name=".ApplicationPolicyActivity"
-            android:exported="true" >
-
-
-        </activity>
+            android:exported="true" />
         <activity
             android:name=".FirstPageActivity"
-            android:exported="true">
-
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -35,10 +40,15 @@
             android:exported="true" />
         <activity
             android:name=".SignInActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".SignUpActivity"
             android:exported="true" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+
+        </activity>
     </application>
 
 </manifest>
