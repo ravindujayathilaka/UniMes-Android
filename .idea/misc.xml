@@ -19,18 +19,26 @@
         <entry key="..\:/Ravindu 2/personal/Sliit/Y2S2/MAD/Project/UniMes/app/src/main/res/drawable/background_recived_message.xml" value="0.196" />
         <entry key="..\:/Ravindu 2/personal/Sliit/Y2S2/MAD/Project/UniMes/app/src/main/res/drawable/background_send_message.xml" value="0.196" />
         <entry key="..\:/Ravindu 2/personal/Sliit/Y2S2/MAD/Project/UniMes/app/src/main/res/drawable/bg_message.xml" value="0.196" />
+        <entry key="..\:/Ravindu 2/personal/Sliit/Y2S2/MAD/Project/UniMes/app/src/main/res/drawable/google_button.xml" value="0.196" />
         <entry key="..\:/Ravindu 2/personal/Sliit/Y2S2/MAD/Project/UniMes/app/src/main/res/drawable/ic_add.xml" value="0.196" />
         <entry key="..\:/Ravindu 2/personal/Sliit/Y2S2/MAD/Project/UniMes/app/src/main/res/drawable/ic_back.xml" value="0.196" />
         <entry key="..\:/Ravindu 2/personal/Sliit/Y2S2/MAD/Project/UniMes/app/src/main/res/drawable/ic_logout.xml" value="0.196" />
+        <entry key="..\:/Ravindu 2/personal/Sliit/Y2S2/MAD/Project/UniMes/app/src/main/res/drawable/progress_track.xml" value="0.196" />
+        <entry key="..\:/Ravindu 2/personal/Sliit/Y2S2/MAD/Project/UniMes/app/src/main/res/layout/activity_about_us.xml" value="0.25416666666666665" />
         <entry key="..\:/Ravindu 2/personal/Sliit/Y2S2/MAD/Project/UniMes/app/src/main/res/layout/activity_application_policy.xml" value="0.25416666666666665" />
         <entry key="..\:/Ravindu 2/personal/Sliit/Y2S2/MAD/Project/UniMes/app/src/main/res/layout/activity_chat.xml" value="0.25416666666666665" />
         <entry key="..\:/Ravindu 2/personal/Sliit/Y2S2/MAD/Project/UniMes/app/src/main/res/layout/activity_main.xml" value="0.264" />
+        <entry key="..\:/Ravindu 2/personal/Sliit/Y2S2/MAD/Project/UniMes/app/src/main/res/layout/activity_settings.xml" value="0.25416666666666665" />
         <entry key="..\:/Ravindu 2/personal/Sliit/Y2S2/MAD/Project/UniMes/app/src/main/res/layout/activity_sign_in.xml" value="0.264" />
         <entry key="..\:/Ravindu 2/personal/Sliit/Y2S2/MAD/Project/UniMes/app/src/main/res/layout/activity_sign_up.xml" value="0.264" />
         <entry key="..\:/Ravindu 2/personal/Sliit/Y2S2/MAD/Project/UniMes/app/src/main/res/layout/activity_users.xml" value="0.25" />
+        <entry key="..\:/Ravindu 2/personal/Sliit/Y2S2/MAD/Project/UniMes/app/src/main/res/layout/fragment_question_poll.xml" value="0.25416666666666665" />
+        <entry key="..\:/Ravindu 2/personal/Sliit/Y2S2/MAD/Project/UniMes/app/src/main/res/layout/fragment_status.xml" value="0.25416666666666665" />
         <entry key="..\:/Ravindu 2/personal/Sliit/Y2S2/MAD/Project/UniMes/app/src/main/res/layout/item_container_recived_message.xml" value="0.25416666666666665" />
         <entry key="..\:/Ravindu 2/personal/Sliit/Y2S2/MAD/Project/UniMes/app/src/main/res/layout/item_container_send_message.xml" value="0.25416666666666665" />
         <entry key="..\:/Ravindu 2/personal/Sliit/Y2S2/MAD/Project/UniMes/app/src/main/res/layout/item_container_user.xml" value="0.25416666666666665" />
+        <entry key="..\:/Ravindu 2/personal/Sliit/Y2S2/MAD/Project/UniMes/app/src/main/res/layout/sample_question_poll.xml" value="0.25416666666666665" />
+        <entry key="..\:/Ravindu 2/personal/Sliit/Y2S2/MAD/Project/UniMes/app/src/main/res/layout/sample_sender.xml" value="0.25416666666666665" />
         <entry key="..\:/Ravindu 2/personal/Sliit/Y2S2/MAD/Project/UniMes/app/src/main/res/menu/menu.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/nimil.DESKTOP-6VSG86E/Desktop/MAD/MAD project/UniMes-Android/app/src/main/res/layout/activity_kandidat.xml" value="0.22826086956521738" />
       </map>

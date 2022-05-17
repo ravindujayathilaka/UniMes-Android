@@ -3,6 +3,7 @@ package com.example.unimes.Adapters;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -71,25 +72,26 @@ public class ChatAdapter extends RecyclerView.Adapter{
         holder.itemView.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View view) {
+                FirebaseDatabase database = FirebaseDatabase.getInstance();
 
                 new AlertDialog.Builder(context)
                         .setTitle("Delete Message")
                         .setMessage("Are you sure you want to delete this message ?")
-                        .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                        .setPositiveButton(Html.fromHtml("<font color='#000000'>Yes</font>"), new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialogInterface, int i) {
-                                FirebaseDatabase database = FirebaseDatabase.getInstance();
                                 String senderRoom = FirebaseAuth.getInstance().getUid() + receiverId;
-                                database.getReference().child("Chats").child(senderRoom)
-                                        .child(messagesModel.getMessageId())
+
+                                database.getReference().child("Chats")
+                                        .child(senderRoom)
                                         .setValue(null);
                             }
-                        }).setNegativeButton("No", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        dialogInterface.dismiss();
-                    }
-                }).show();
+                        }).setNegativeButton(Html.fromHtml("<font color='#000000'>No</font>"), new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                                dialogInterface.dismiss();
+                            }
+                        }).show();
                 return false;
             }
         });

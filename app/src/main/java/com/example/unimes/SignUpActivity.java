@@ -46,7 +46,7 @@ public class SignUpActivity extends AppCompatActivity {
 
                 progressDialog.show();
                 auth.createUserWithEmailAndPassword(
-                        binding.email.getText().toString(), binding.password.getText().toString()).
+                                binding.email.getText().toString(), binding.password.getText().toString()).
                         addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
@@ -65,14 +65,14 @@ public class SignUpActivity extends AppCompatActivity {
                                 }
                             }
                         });
-                    }
-                });
-                binding.AlreadyAccount.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        Intent intent = new Intent(SignUpActivity.this, SignInActivity.class);
-                        startActivity(intent);
-                    }
+            }
+        });
+        binding.AlreadyAccount.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(SignUpActivity.this, SignInActivity.class);
+                startActivity(intent);
+            }
         });
 
 

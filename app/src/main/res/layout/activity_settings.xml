@@ -124,6 +124,12 @@
             android:text="SAVE"
             android:textColor="@color/colorPrimary" />
 
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="@android:style/Widget.DeviceDefault.Light.ProgressBar.Large"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
     </LinearLayout>
 
     <LinearLayout
@@ -136,7 +142,7 @@
         android:padding="40dp">
 
         <TextView
-            android:id="@+id/textView2"
+            android:id="@+id/privacypolicy_btn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="50dp"
@@ -150,7 +156,7 @@
             app:drawableTint="@color/colorPrimary" />
 
         <TextView
-            android:id="@+id/textView3"
+            android:id="@+id/aboutus_btn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="50dp"
@@ -204,5 +210,20 @@
             android:textSize="16sp"
             android:textStyle="bold"
             app:drawableTint="@color/colorPrimary" />
+
+        <TextView
+            android:id="@+id/deleteUserAccount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:drawableLeft="@drawable/ic_delete"
+            android:drawablePadding="15dp"
+            android:padding="10dp"
+            android:text="Delete Account"
+            android:textColor="@color/red"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:drawableTint="@color/red" />
     </LinearLayout>
+
 </RelativeLayout>

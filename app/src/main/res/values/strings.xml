@@ -45,5 +45,15 @@ Our Services have optional features which, if used by you, require us to collect
 \nit20113704@my.sliit.lk</p>
 </string>
     <string name="accept_the_conditions">Accept the Conditions</string>
+    <string name="sampleQuestion">Sample Question ?????</string>
+    <string name="answer1">Answer 1</string>
+    <string name="answer2">Answer 2</string>
+    <string name="answer3">Answer 3</string>
+    <string name="answer4">Answer 4</string>
+    <string name="create">Create</string>
+    <string name="QuestionPoll">Question Poll</string>
+    <string name="delete">Delete</string>
+    <string name="update">Update</string>
+    <string name="aboutUs">About Us</string>
 
 </resources>
